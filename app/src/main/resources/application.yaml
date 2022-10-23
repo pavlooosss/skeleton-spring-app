@@ -6,4 +6,4 @@ spring:
     password: 4y7sV96vA9wv46VR
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yaml
-    enabled: true
+    enabled: false

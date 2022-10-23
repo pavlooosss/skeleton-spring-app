@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: create table customer
+      author: pavel@svhartsberg
+      preConditions:
+        - onFail: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(1) from information_schema.tables where table_name = 'customers' and table_schema = current_schema()
+      changes:
+        - sql:
+            CREATE TABLE customers (
+            id        bigserial PRIMARY KEY,
+            name       varchar(50) NOT NULL,
+            created_at timestamp NOT NULL default now()
+            );
