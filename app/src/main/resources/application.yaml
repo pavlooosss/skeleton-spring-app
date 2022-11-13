@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/test_db?currentSchema=test
+    username: postgres
+    password: 4y7sV96vA9wv46VR
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: false

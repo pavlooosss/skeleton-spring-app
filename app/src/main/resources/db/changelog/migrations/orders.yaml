@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: create table orders
+      author: pavel@shvartsberg
+      preConditions:
+        - onFail: MARK_RAN
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(1) from information_schema.tables where table_name = 'orders' and table_schema = current_schema()
+      changes:
+        - sql:
+            CREATE TABLE orders (
+            id        bigserial PRIMARY KEY,
+            description       varchar(50) NOT NULL,
+            created_at timestamp NOT NULL default now()
+            );
