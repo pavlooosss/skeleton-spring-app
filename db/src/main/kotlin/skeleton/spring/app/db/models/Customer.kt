@@ -12,5 +12,4 @@ data class Customer(
     val name: String,
     @CreatedDate
     val createdAt: Instant = Instant.now()
-) {
-}
+)

@@ -12,8 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired
 @SpringBootTest
 @ActiveProfiles("test")
 
-class CustomerRepositoryTest(
-) {
+class CustomerRepositoryTest {
     @Autowired
     private lateinit var customerRepository: CustomerRepository
 

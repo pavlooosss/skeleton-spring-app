@@ -3,4 +3,5 @@ plugins {
     kotlin("plugin.spring") version "1.7.20" apply false
     id("org.springframework.boot") version "2.7.4" apply false
     id("io.spring.dependency-management") version "1.0.14.RELEASE" apply false
+    id("io.gitlab.arturbosch.detekt") version("1.22.0-RC3") apply false
 }
