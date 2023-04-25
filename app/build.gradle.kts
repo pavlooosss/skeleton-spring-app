@@ -1,5 +1,11 @@
 plugins {
-    id("skeleton.spring.app.kotlin-spring-common")
+    id(Plugins.spring_boot) version PluginVersions.spring_boot
+    id(Plugins.spring_dependency_management) version PluginVersions.spring_dependency_management
+    id(Plugins.spring_kotlin) version PluginVersions.spring_kotlin
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 dependencies {
